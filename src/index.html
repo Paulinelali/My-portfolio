@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- goog fonts Poppins -->
+    <!-- responsive stylesheets -->
     <link rel="stylesheet" media="screen and (min-width: 600px)" href="desktop.css">
+    <link rel="stylesheet" media="screen and (max-width: 605px)" href="mobile.css">
     <title>Ayomide S.E.P Portfolio</title>
 </head>
 <body>
@@ -16,11 +17,16 @@
                 <nav class="navwrapper">
                     <div class="logo"><img src="../assets/my picture.png" alt=""></div>
                     <div class="nav-links">
-                        <ul>
+                        <ul class="init-hide">
                             <li><a href="#project">Projects</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
+                        <div class="hamburge toggleHide-mobile">
+                            <span class="burn-line"></span>
+                            <span class="burn-line"></span>
+                            <span class="burn-line"></span>
+                        </div>
                     </div>
                 </nav>
             </header>
@@ -40,7 +46,7 @@
                 </div>
             </section>
         </section>
-        <section class="projects section" id="projects">
+        <section class="projects section" id="project">
             <ul class="project-wrapper">
                 
             </ul>
@@ -109,7 +115,7 @@
                              
                                 <input type="email" name="email" placeholder="Ënter your email address here" required><br>
                                 
-                                <textarea name="message" id="msg" cols="50" rows="30" placeholder="Enter your message here" required></textarea>
+                                <textarea name="message" id="msg" cols="30" rows="10" placeholder="Enter your message here" required></textarea>
 
                             <button type="submit">Send</button>
                         </form>
@@ -119,7 +125,6 @@
         </footer>
     </section>
     <section class="modal-wrapper modal-popup-wrapper toggleHide">
-        <h1>Modal pop up</h1>
     </section>
     <script type="module" src="index.js"></script>
 </body>

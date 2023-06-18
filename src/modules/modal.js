@@ -39,8 +39,8 @@ const modalFunc = () => {
                             <li>${project.stack[2]}</li>
                         </ul>
                         <div class="modal-btns">
-                            <button class="see-project">See live</button>
-                            <button class="see-project">See source</button>
+                            <button class="modal-see-project">See live</button>
+                            <button class="modal-see-project">See source</button>
                         </div>
                     </div>
                 </div>
@@ -50,10 +50,23 @@ const modalFunc = () => {
     }
 
 
+    const closeModal = () => {
+        const closeIcon = document.querySelectorAll(".close-modal");
+
+        closeIcon.forEach( el => {
+            el.addEventListener("click", () => {
+                body.classList.toggle("no-scroll-Y");
+                modalWrapper.classList.toggle("toggleHide");
+                siteWrapper.classList.toggle("blur");
+                console.log(body.scrollTop)
+            })
+        })
+    }
+
     
     const toggleClasses = () => {
         siteWrapper.classList.toggle("blur");
-        body.style.position = "fixed";
+        body.classList.toggle("no-scroll-Y");
         modalWrapper.classList.toggle("toggleHide");
     }
 
@@ -62,6 +75,7 @@ const modalFunc = () => {
         const topParent = Number(e.target.parentElement.parentElement.id);
         toggleClasses();
         projectPopUp(topParent);
+        closeModal();
     })
    })
 }
