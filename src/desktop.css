@@ -213,6 +213,7 @@ h3 {
 }
 
 .project-wrapper {
+  width: 100%;
   margin: 100px 0;
   display: flex;
   flex-direction: column;
@@ -220,6 +221,7 @@ h3 {
 }
 
 .project-card {
+  width: 100%;
   display: flex;
   gap: 5%;
   padding: 25px;
@@ -232,6 +234,7 @@ h3 {
   -o-border-radius: 25px;
 }
 .project-card .project-detail-left {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -305,7 +308,7 @@ h3 {
 }
 
 .project-img {
-  width: 60%;
+  width: 50%;
   transition-duration: 0.8s;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -494,6 +497,10 @@ li {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+.mobile-menu-wrapper {
+  display: none !important;
 }
 
 /*# sourceMappingURL=desktop.css.map */

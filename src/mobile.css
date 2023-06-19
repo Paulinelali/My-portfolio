@@ -23,6 +23,7 @@ h2 {
 
 h3 {
   color: #7F8CFF;
+  font-size: 24px;
 }
 
 .header-wrapper {
@@ -34,12 +35,12 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
-.header-wrapper .navwrapper .nav-links .hamburge {
+.header-wrapper .navwrapper .nav-links .hamburger {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.header-wrapper .navwrapper .nav-links .hamburge .burn-line {
+.header-wrapper .navwrapper .nav-links .hamburger .burn-line {
   width: 35px;
   border: 2px solid rgba(96, 112, 255, 0.5);
 }
@@ -139,6 +140,22 @@ h3 {
   -o-border-radius: 8px;
 }
 
+.resume-wrapper .get-my-resume {
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: rgb(57, 109, 242);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.resume-wrapper .get-my-resume a {
+  color: white;
+  text-decoration: none;
+}
+
 footer .top-widget {
   background-color: white;
   padding: 20% 5% 30% 5%;
@@ -209,7 +226,7 @@ footer .top-widget .stack-wrapper-inner-ul .languages-list li {
   -ms-border-radius: 10% 0 0 0;
   -o-border-radius: 10% 0 0 0;
   background-image: url("/assets/contact form shapes-mobile.png");
-  background-position: 0 10px;
+  background-position: 60px 40px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -220,7 +237,7 @@ footer .top-widget .stack-wrapper-inner-ul .languages-list li {
   text-align: center;
 }
 .no-full-with-footer h2, .no-full-with-footer p {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .contact-form-section .inner-warpper {
@@ -278,8 +295,154 @@ footer .top-widget .stack-wrapper-inner-ul .languages-list li {
   -o-transform: scale(1.01);
 }
 
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(96, 112, 255);
+  backdrop-filter: blur(9px);
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+}
+.mobile-nav .mobile-nav-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+  padding: 0 0 0 50px;
+}
+.mobile-nav .mobile-nav-link-wrapper li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.mobile-nav .mobile-nav-link-wrapper li:hover {
+  box-shadow: 10px 10px 5px rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.modal-popup-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+.modal-popup-wrapper .modal-project-card {
+  padding: 12px;
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.modal-popup-wrapper .modal-project-card .modal-popup-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-popup-wrapper .modal-project-card .modal-popup-header-wrapper .close-modal {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  color: red;
+}
+.modal-popup-wrapper .modal-project-card .modal-popup-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+.modal-popup-wrapper .modal-project-card .modal-popup-header .canopy-inner-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.modal-popup-wrapper .modal-project-card .modal-project-img {
+  width: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.modal-popup-wrapper .modal-project-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
+}
+.modal-popup-wrapper .modal-project-detail .modal-project-stack-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+.modal-popup-wrapper .modal-project-detail .modal-project-stack-wrapper .modal-project-stack-inner-wrapper {
+  display: flex;
+  gap: 5px;
+}
+.modal-popup-wrapper .modal-project-detail .modal-project-stack-wrapper .modal-project-stack-inner-wrapper li {
+  background-color: rgb(235, 235, 255);
+  color: rgb(96, 112, 255);
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.modal-popup-wrapper .modal-project-detail .modal-project-stack-wrapper .modal-btns {
+  justify-content: center;
+  display: flex;
+  gap: 12px;
+}
+
+.modal-see-project {
+  width: auto;
+  background: transparent;
+  color: rgb(96, 112, 255);
+  border: 2px solid rgb(96, 112, 255);
+  padding: 10px;
+  font-size: 1rem;
+  transition-duration: 0.5s;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.modal-see-project:hover {
+  color: white;
+  background-color: rgb(96, 112, 255);
+  box-shadow: 0px 5px 5px rgba(96, 112, 255, 0.5);
+  transform: rotate(5deg) scale(0.9);
+  -webkit-transform: rotate(5deg) scale(0.9);
+  -moz-transform: rotate(5deg) scale(0.9);
+  -ms-transform: rotate(5deg) scale(0.9);
+  -o-transform: rotate(5deg) scale(0.9);
+}
+
 .see-project {
-  width: 30%;
+  width: 40%;
   background: transparent;
   color: rgb(96, 112, 255);
   border: 2px solid rgb(96, 112, 255);
@@ -304,6 +467,21 @@ footer .top-widget .stack-wrapper-inner-ul .languages-list li {
   -o-transform: rotate(5deg) scale(0.9);
 }
 
+.no-scroll-Y {
+  overflow-y: hidden !important;
+}
+
+.blur {
+  filter: blur(1.5rem);
+  overflow-y: s;
+  user-select: none;
+  pointer-events: none;
+}
+
+.p1 {
+  font-size: 20px;
+}
+
 .grey-color {
   color: grey;
 }
@@ -324,7 +502,7 @@ footer .top-widget .stack-wrapper-inner-ul .languages-list li {
 }
 
 .init-hide {
-  display: none;
+  display: none !important;
 }
 
 .toggleHide {
